@@ -1,0 +1,24 @@
+name: keyboard_service_example
+description: keyboard_service example.
+version: 0.0.1
+homepage: https://github.com/Gerrel/keyboard_service
+
+environment:
+  sdk: ">=2.3.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  keyboard_service:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
