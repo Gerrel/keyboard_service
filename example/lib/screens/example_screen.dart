@@ -15,7 +15,8 @@ class _ExampleScreenState extends State<ExampleScreen> {
   @override
   Widget build(BuildContext context) {
     final visible = KeyboardService.isVisible(context);
-    return KeyboardAutoDismiss(scaffold: Scaffold(
+    return KeyboardAutoDismiss(
+        scaffold: Scaffold(
       appBar: AppBar(
         title: Text('Keyboard Service Example'),
       ),
