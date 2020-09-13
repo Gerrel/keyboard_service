@@ -28,7 +28,7 @@ return KeyboardAutoDismiss(
     );
 ```
 
-Wrap your top scaffold:
+Use the service class if needed:
 ```dart
 // Use method below to dismiss the keyboard
 KeyboardService.dismiss();
