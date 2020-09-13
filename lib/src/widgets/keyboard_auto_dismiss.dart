@@ -11,9 +11,10 @@ class KeyboardAutoDismiss extends StatelessWidget {
     assert(context.findAncestorWidgetOfExactType<KeyboardAutoDismiss>() == null,
         'Can only have 1 KeyboardAutoDismiss in the widget tree.');
     return GestureDetector(
-        onTap: () {
-          KeyboardService.dismiss();
-        },
-        child: scaffold);
+      onTap: () {
+        KeyboardService.dismiss(unfocus: context);
+      },
+      child: scaffold,
+    );
   }
 }

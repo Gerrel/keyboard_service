@@ -14,7 +14,28 @@ There are 2 classes
 - 'KeyboardService': Check if keyboard is visible and dismiss keyboard.
 - 'KeyboardAutoDismiss': A widget that wraps a Scaffold widget for automatically dismissing the keyboard.
 
-`See example project for some code.`
+`Also see example project`
+
+Wrap your top scaffold:
+```dart
+return KeyboardAutoDismiss(
+        scaffold: Scaffold(
+            appBar: AppBar(
+                title: Text('Keyboard Service Example'),
+            ),
+      ...
+        ),
+    );
+```
+
+Wrap your top scaffold:
+```dart
+// Use method below to dismiss the keyboard
+KeyboardService.dismiss();
+
+// Use the optional BuildContext parameter to remove focus of a TextField
+KeyboardService.dismiss(unfocus: context);
+```
 
 ## License
 

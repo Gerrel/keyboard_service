@@ -1,6 +1,6 @@
 name: keyboard_service
 description: Keyboard visibility / (auto-) dismiss package without native plugin
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Gerrel/keyboard_service
 
 environment:
@@ -13,9 +13,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  pedantic: ^1.9.0
 
 flutter:
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
