@@ -2,3 +2,6 @@ include: package:pedantic/analysis_options.yaml
 analyzer:
   errors:
     missing_required_param: error
+linter:
+  rules:
+    - public_member_api_docs

@@ -1,3 +1,6 @@
+## [1.0.3] - 13 sep. 2020.
+* Added documentation to public api's.
+
 ## [1.0.2] - 13 sep. 2020.
 * README.md text change.
 

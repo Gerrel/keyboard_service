@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+/// A service class that provides methods
+/// to detect keyboard visisbility and the
+/// dismissal of the keyboard.
 class KeyboardService {
+  /// Returns a boolean value that indicates
+  /// if the keyboard is currently is visible or not.
   static bool isVisible(BuildContext context) {
     assert(context != null);
     var myContext =
@@ -14,6 +19,9 @@ class KeyboardService {
     return keyboardVisisble;
   }
 
+  /// Will dismiss the keyboard if it is currently visible
+  /// The optional parameter `unfocus` will also unfocus
+  /// the input field in the BuildContext widget tree.
   static void dismiss({BuildContext unfocus}) {
     SystemChannels.textInput.invokeMethod('TextInput.hide');
     if (unfocus != null) {

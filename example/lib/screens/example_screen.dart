@@ -2,7 +2,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:keyboard_service/keyboard_service.dart';
 
+/// The example screen which uses KeyboardAutoDismiss
+/// and KeyboardService for demonstration.
 class ExampleScreen extends StatefulWidget {
+  /// Simple widget with input field and button
+  /// to dismiss the keyboard.
   ExampleScreen({
     Key key,
   }) : super(key: key);
