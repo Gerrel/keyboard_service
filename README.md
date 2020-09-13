@@ -4,6 +4,7 @@ Keyboard visibility / (auto-) dismiss package without native plugin
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
+[![pub package](https://img.shields.io/pub/v/keyboard_service.svg)](https://pub.dev/packages/keyboard_service)
 
 ## Getting Started
 
