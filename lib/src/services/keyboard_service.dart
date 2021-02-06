@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 /// A service class that provides methods
 /// to detect keyboard visisbility and the
 /// dismissal of the keyboard.
-class KeyboardService {
+abstract class KeyboardService {
   /// Returns a boolean value that indicates
   /// if the keyboard is currently is visible or not.
   static bool isVisible(BuildContext context) {

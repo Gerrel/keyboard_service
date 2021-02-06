@@ -1,3 +1,6 @@
+## [1.0.4] - 6 feb. 2021.
+* made service class abstract and updated readme
+
 ## [1.0.3] - 13 sep. 2020.
 * Added documentation to public api's.
 

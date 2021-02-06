@@ -36,6 +36,10 @@ KeyboardService.dismiss();
 
 // Use the optional BuildContext parameter to remove focus of a TextField
 KeyboardService.dismiss(unfocus: context);
+
+// Check if the keyboard is visible
+KeyboardService.isVisible(context);
+
 ```
 
 ## License
