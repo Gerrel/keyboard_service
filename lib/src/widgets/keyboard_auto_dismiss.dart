@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../services/keyboard_service.dart';
+import 'package:keyboard_service/keyboard_service.dart';
 
 /// A widget that wraps the Scaffold widget
 /// It will catch clicks and presses outside of
@@ -12,9 +11,22 @@ class KeyboardAutoDismiss extends StatelessWidget {
   const KeyboardAutoDismiss({@required Scaffold scaffold})
       : _scaffold = scaffold;
 
+  /// Get KeyboardAutoDismiss in the ancestor widget tree
+  static KeyboardAutoDismiss of(BuildContext context) {
+    return context.findAncestorWidgetOfExactType<KeyboardAutoDismiss>();
+  }
+
+  /// Wrap the scaffold if there is no KeyboardAutoDimiss already
+  static Widget wrapIfNeeded(BuildContext context, Scaffold scaffold) {
+    if (KeyboardAutoDismiss.of(context) == null) {
+      return KeyboardAutoDismiss(scaffold: scaffold);
+    }
+    return scaffold;
+  }
+
   @override
   Widget build(BuildContext context) {
-    assert(context.findAncestorWidgetOfExactType<KeyboardAutoDismiss>() == null,
+    assert(KeyboardAutoDismiss.of(context) == null,
         'Can only have 1 KeyboardAutoDismiss in the widget tree.');
     return GestureDetector(
       onTap: () {

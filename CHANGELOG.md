@@ -1,3 +1,9 @@
+## [1.0.5] - 24 feb. 2021.
+* hiding contructor of KeyboardService
+* added .of method to KeyboardAutoDismiss widget
+* added .wrapIfNeeded method to KeyboardAutoDismiss widget
+* using package import
+
 ## [1.0.4] - 6 feb. 2021.
 * made service class abstract and updated readme
 

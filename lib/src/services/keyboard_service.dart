@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 /// to detect keyboard visisbility and the
 /// dismissal of the keyboard.
 abstract class KeyboardService {
+  KeyboardService._();
+
   /// Returns a boolean value that indicates
   /// if the keyboard is currently is visible or not.
   static bool isVisible(BuildContext context) {
