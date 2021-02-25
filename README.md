@@ -1,6 +1,6 @@
 # keyboard_service
 
-Keyboard visibility / (auto-) dismiss package without native plugin
+Keyboard visibility / (auto-) dismiss package without the need of native plugin
 
 [![Watch on GitHub][github-watch-badge]][github-watch]
 [![Star on GitHub][github-star-badge]][github-star]
