@@ -1,3 +1,7 @@
+## [1.0.6] - 25 feb. 2021.
+* added dismiss enum
+* and made the scaffold parameter of .wrapIfNeeded method named
+
 ## [1.0.5] - 24 feb. 2021.
 * hiding contructor of KeyboardService
 * added .of method to KeyboardAutoDismiss widget

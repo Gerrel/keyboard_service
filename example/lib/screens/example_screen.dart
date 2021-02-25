@@ -34,7 +34,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
                 labelText: 'Input field',
               ),
             ),
-            FlatButton(
+            TextButton(
               onPressed: () {
                 KeyboardService.dismiss();
               },
