@@ -1,3 +1,6 @@
+## [2.0.0] - 10 mrt. 2021.
+* null-safety update
+
 ## [1.0.6] - 25 feb. 2021.
 * added dismiss enum
 * and made the scaffold parameter of .wrapIfNeeded method named
