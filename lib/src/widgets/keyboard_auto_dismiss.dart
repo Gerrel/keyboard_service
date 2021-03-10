@@ -26,24 +26,22 @@ class KeyboardAutoDismiss extends StatelessWidget {
 
   /// The parameter `scaffold` is a widget of the type Scaffold.
   const KeyboardAutoDismiss({
-    Key key,
-    @required Scaffold scaffold,
+    Key? key,
+    required Scaffold scaffold,
     KeyboardDismiss dismiss = KeyboardDismiss.always,
-  })  : assert(scaffold != null),
-        assert(dismiss != null),
-        _scaffold = scaffold,
+  })  : _scaffold = scaffold,
         _dismiss = dismiss,
         super(key: key);
 
   /// Get KeyboardAutoDismiss in the ancestor widget tree
-  static KeyboardAutoDismiss of(BuildContext context) {
+  static KeyboardAutoDismiss? of(BuildContext context) {
     return context.findAncestorWidgetOfExactType<KeyboardAutoDismiss>();
   }
 
   /// Wrap the scaffold if there is no KeyboardAutoDimiss already
   static Widget wrapIfNeeded(
     BuildContext context, {
-    @required Scaffold scaffold,
+    required Scaffold scaffold,
   }) {
     if (KeyboardAutoDismiss.of(context) == null) {
       return KeyboardAutoDismiss(scaffold: scaffold);

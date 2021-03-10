@@ -10,7 +10,6 @@ abstract class KeyboardService {
   /// Returns a boolean value that indicates
   /// if the keyboard is currently is visible or not.
   static bool isVisible(BuildContext context) {
-    assert(context != null);
     var myContext =
         context.findRootAncestorStateOfType<ScaffoldState>()?.context;
     myContext ??= context;
@@ -24,7 +23,7 @@ abstract class KeyboardService {
   /// Will dismiss the keyboard if it is currently visible
   /// The optional parameter `unfocus` will also unfocus
   /// the input field in the BuildContext widget tree.
-  static void dismiss({BuildContext unfocus}) {
+  static void dismiss({BuildContext? unfocus}) {
     SystemChannels.textInput.invokeMethod('TextInput.hide');
     if (unfocus != null) {
       FocusScope.of(unfocus).unfocus();
