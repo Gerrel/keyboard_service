@@ -1,3 +1,7 @@
+## [2.0.1] - 15 jan. 2022.
+* replaced deprecated linter package
+* updated example project
+
 ## [2.0.0] - 10 mrt. 2021.
 * null-safety update
 

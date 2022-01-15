@@ -52,8 +52,10 @@ class KeyboardAutoDismiss extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (_dismiss == KeyboardDismiss.always) {
-      assert(KeyboardAutoDismiss.of(context) == null,
-          'Can only have 1 KeyboardAutoDismiss in the widget tree.');
+      assert(
+        KeyboardAutoDismiss.of(context) == null,
+        'Can only have 1 KeyboardAutoDismiss in the widget tree.',
+      );
       return GestureDetector(
         onTap: () {
           KeyboardService.dismiss(unfocus: context);

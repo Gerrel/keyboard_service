@@ -24,7 +24,7 @@ abstract class KeyboardService {
   /// The optional parameter `unfocus` will also unfocus
   /// the input field in the BuildContext widget tree.
   static void dismiss({BuildContext? unfocus}) {
-    SystemChannels.textInput.invokeMethod('TextInput.hide');
+    SystemChannels.textInput.invokeMethod<void>('TextInput.hide');
     if (unfocus != null) {
       FocusScope.of(unfocus).unfocus();
     }

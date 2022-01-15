@@ -7,7 +7,7 @@ import 'package:keyboard_service/keyboard_service.dart';
 class ExampleScreen extends StatefulWidget {
   /// Simple widget with input field and button
   /// to dismiss the keyboard.
-  ExampleScreen({
+  const ExampleScreen({
     Key key,
   }) : super(key: key);
 
@@ -20,32 +20,41 @@ class _ExampleScreenState extends State<ExampleScreen> {
   Widget build(BuildContext context) {
     final visible = KeyboardService.isVisible(context);
     return KeyboardAutoDismiss(
-        scaffold: Scaffold(
-      appBar: AppBar(
-        title: Text('Keyboard Service Example'),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Input field',
+      scaffold: Scaffold(
+        appBar: AppBar(
+          title: const Text('Keyboard Service Example'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: <Widget>[
+              const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'Input field',
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: () {
-                KeyboardService.dismiss();
-              },
-              child: Text(
-                "Dismiss keyboard",
+              TextButton(
+                onPressed: () {
+                  KeyboardService.dismiss();
+                },
+                child: const Text(
+                  'Dismiss keyboard',
+                ),
               ),
-            ),
-            Text("Keyboard is visible ${visible}")
-          ],
+              TextButton(
+                onPressed: () {
+                  KeyboardService.dismiss(unfocus: context);
+                },
+                child: const Text(
+                  'Dismiss and unfocus keyboard',
+                ),
+              ),
+              Text('Keyboard is visible $visible'),
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }
