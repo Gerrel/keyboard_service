@@ -47,7 +47,7 @@ KeyboardService.isVisible(context);
 This project is licensed under the MIT License - see the 
 [license] file for details.
 
-[license]: https://github.com/Gerrel/keyboard_service/blob/master/LICENSE.md
+[license]: https://github.com/Gerrel/keyboard_service/blob/master/LICENSE
 [github-watch-badge]: https://img.shields.io/github/watchers/Gerrel/keyboard_service.svg?style=social
 [github-watch]: https://github.com/Gerrel/keyboard_service/watchers
 [github-star-badge]: https://img.shields.io/github/stars/Gerrel/keyboard_service.svg?style=social
