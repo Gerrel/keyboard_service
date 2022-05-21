@@ -1,3 +1,7 @@
+## [2.0.2] - 21 may 2022.
+* update packages
+* updated example project
+
 ## [2.0.1] - 15 jan. 2022.
 * replaced deprecated linter package
 * updated example project

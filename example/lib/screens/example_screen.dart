@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:keyboard_service/keyboard_service.dart';
 
@@ -12,10 +11,11 @@ class ExampleScreen extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ExampleScreenState createState() => _ExampleScreenState();
+  ExampleScreenState createState() => ExampleScreenState();
 }
 
-class _ExampleScreenState extends State<ExampleScreen> {
+/// State for ExampleScreen
+class ExampleScreenState extends State<ExampleScreen> {
   @override
   Widget build(BuildContext context) {
     final visible = KeyboardService.isVisible(context);
