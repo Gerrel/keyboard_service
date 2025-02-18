@@ -1,3 +1,7 @@
+## [2.0.3] - 18 feb 2025.
+* update packages
+* updated example project
+
 ## [2.0.2] - 21 may 2022.
 * update packages
 * updated example project

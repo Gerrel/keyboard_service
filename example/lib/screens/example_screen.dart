@@ -7,7 +7,7 @@ class ExampleScreen extends StatefulWidget {
   /// Simple widget with input field and button
   /// to dismiss the keyboard.
   const ExampleScreen({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -34,11 +34,9 @@ class ExampleScreenState extends State<ExampleScreen> {
                   labelText: 'Input field',
                 ),
               ),
-              TextButton(
-                onPressed: () {
-                  KeyboardService.dismiss();
-                },
-                child: const Text(
+              const TextButton(
+                onPressed: KeyboardService.dismiss,
+                child: Text(
                   'Dismiss keyboard',
                 ),
               ),
