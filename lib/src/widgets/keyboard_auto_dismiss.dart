@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:keyboard_service/keyboard_service.dart';
 
 /// There can be only KeyboardAutoDismiss widget in the tree
@@ -17,21 +17,21 @@ enum KeyboardDismiss {
   never,
 }
 
-/// A widget that wraps the Scaffold widget
+/// A widget that wraps a Scaffold widget (from any Material package)
 /// It will catch clicks and presses outside of
 /// UI input component and will dismiss the keyboard automatically.
 class KeyboardAutoDismiss extends StatelessWidget {
-  final Scaffold _scaffold;
+  final Widget _scaffold;
   final KeyboardDismiss _dismiss;
 
-  /// The parameter `scaffold` is a widget of the type Scaffold.
+  /// The parameter `scaffold` is the Scaffold widget (or any other widget)
+  /// that should dismiss the keyboard when tapped outside an input field.
   const KeyboardAutoDismiss({
-    Key? key,
-    required Scaffold scaffold,
+    super.key,
+    required Widget scaffold,
     KeyboardDismiss dismiss = KeyboardDismiss.always,
   })  : _scaffold = scaffold,
-        _dismiss = dismiss,
-        super(key: key);
+        _dismiss = dismiss;
 
   /// Get KeyboardAutoDismiss in the ancestor widget tree
   static KeyboardAutoDismiss? of(BuildContext context) {
@@ -41,7 +41,7 @@ class KeyboardAutoDismiss extends StatelessWidget {
   /// Wrap the scaffold if there is no KeyboardAutoDimiss already
   static Widget wrapIfNeeded(
     BuildContext context, {
-    required Scaffold scaffold,
+    required Widget scaffold,
   }) {
     if (KeyboardAutoDismiss.of(context) == null) {
       return KeyboardAutoDismiss(scaffold: scaffold);

@@ -1,6 +1,8 @@
 include: package:lints/recommended.yaml
 analyzer:
-  exclude: [lib/generated/**]
+  exclude:
+    - lib/generated/**
+    - build/**
   language:
     strict-raw-types: true
   strong-mode:

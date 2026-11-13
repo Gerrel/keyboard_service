@@ -1,3 +1,10 @@
+## [2.1.0] - 13 nov 2026.
+* support Flutter 3.50 where Material moved to `package:material_ui`
+* `KeyboardAutoDismiss` now accepts any widget, so the Scaffold can come from `flutter/material` or `material_ui`
+* the package no longer depends on Material; it only imports `flutter/widgets`
+* `KeyboardService.isVisible` reads the view insets directly instead of looking up a `ScaffoldState`
+* updated example project
+
 ## [2.0.4] - 05 aug 2025.
 * update packages
 

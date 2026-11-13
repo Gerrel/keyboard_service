@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 
 /// A service class that provides methods
 /// to detect keyboard visisbility and the
@@ -10,14 +10,9 @@ abstract class KeyboardService {
   /// Returns a boolean value that indicates
   /// if the keyboard is currently is visible or not.
   static bool isVisible(BuildContext context) {
-    var myContext =
-        context.findRootAncestorStateOfType<ScaffoldState>()?.context;
-    myContext ??= context;
-    var keyboardVisisble = false;
-    if (MediaQuery.of(myContext).viewInsets.bottom > 0) {
-      keyboardVisisble = true;
-    }
-    return keyboardVisisble;
+    // The view insets are read from the view itself, because a Scaffold
+    // removes them from the MediaQuery of its descendants.
+    return View.of(context).viewInsets.bottom > 0;
   }
 
   /// Will dismiss the keyboard if it is currently visible

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:keyboard_service/keyboard_service.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// The example screen which uses KeyboardAutoDismiss
 /// and KeyboardService for demonstration.
